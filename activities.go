@@ -18,7 +18,7 @@ type IPActivities struct {
 }
 
 func (i *IPActivities) GetIP(ctx context.Context) (string, error) {
-	resp, err := i.HTTPClient.Get("")
+	resp, err := i.HTTPClient.Get("https://icanhazip.com")
 	if err != nil {
 		return "", err
 	}
