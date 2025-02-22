@@ -1,5 +1,8 @@
 module temporal-tryout
 
-go 1.24.0
+go 1.16
 
-require go.temporal.io/sdk v1.32.1 // indirect
+require (
+	github.com/stretchr/testify v1.8.0
+	go.temporal.io/sdk v1.17.0
+)
