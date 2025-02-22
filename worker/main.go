@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
-	iplocate "temporal-tryout"
+	"temporal-tryout/iplocate"
 
  	"go.temporal.io/sdk/client"
     "go.temporal.io/sdk/worker"
