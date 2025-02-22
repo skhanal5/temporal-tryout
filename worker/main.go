@@ -22,7 +22,7 @@ func main() {
 		HTTPClient: http.DefaultClient,
 	}
 
-	w.RegisterActivity(iplocate.GetAddressFromIP)
+	w.RegisterWorkflow(iplocate.GetAddressFromIP)
 	w.RegisterActivity(activities)
 
 	// Start the Worker
