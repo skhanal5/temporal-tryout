@@ -6,7 +6,7 @@ import (
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
 
-	"money-transfer-project-template-go/app"
+	"temporal-tryout"
 )
 
 // @@@SNIPSTART money-transfer-project-template-go-worker
