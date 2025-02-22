@@ -24,13 +24,13 @@ func GetAddressFromIP(ctx workflow.Context, name string) (string, error) {
 	var ip string
 	err := workflow.ExecuteActivity(ctx, ipActivities.GetIP).Get(ctx, &ip)
 	if err != nil {
-		return "", fmt.Errorf("Failed to get IP: %s", err)
+		return "", fmt.Errorf("failed to get IP: %s", err)
 	}
 
 	var location string
 	err = workflow.ExecuteActivity(ctx, ipActivities.GetLocationInfo, ip).Get(ctx, &location)
 	if err != nil {
-		return "", fmt.Errorf("Failed to get location: %s", err)
+		return "", fmt.Errorf("failed to get location: %s", err)
 	}
 	return fmt.Sprintf("Hello, %s. Your IP is %s and your location is %s", name, ip, location), nil
 
